@@ -1,4 +1,4 @@
-#### birthday counter
+#### Contador sorpresa
 
 A really simple and elegant looking birthday counter
 
