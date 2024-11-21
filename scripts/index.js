@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'Nov 21, 2024 15:10:',
+  birthdate: 'Nov 21, 2024 15:14:',
   name: ' '
 };
 
@@ -48,7 +48,7 @@ x = setInterval(function() {
     hw = w / 2, // half-width
     hh = h / 2,
     opts = {
-      strings: ['PERDONAME', 'ARIANA!', config.name],
+      strings: ['HOLA', 'ERICK Y KRISTAL!', config.name],
       charSize: 30,
       charSpacing: 35,
       lineHeight: 40,
