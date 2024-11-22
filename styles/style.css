@@ -180,3 +180,17 @@ li span {
       opacity: 0;
  }
 }
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Ajusta la altura del contenedor si es necesario */
+  opacity: 0; /* La imagen será invisible al principio */
+  transition: opacity 1s ease; /* Suaviza la transición de aparición */
+}
+
+#image-container img {
+  width: 250px; /* Ajusta el tamaño si es necesario */
+  height: auto;
+}

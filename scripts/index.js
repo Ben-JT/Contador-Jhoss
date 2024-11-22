@@ -48,7 +48,7 @@ x = setInterval(function() {
     hw = w / 2, // half-width
     hh = h / 2,
     opts = {
-      strings: ['HOLA', 'KRISTAL!', config.name],
+      strings: ['FELIZ', 'KRISTAL!', config.name],
       charSize: 30,
       charSpacing: 35,
       lineHeight: 40,
@@ -467,6 +467,7 @@ x = setInterval(function() {
       box.addEventListener('click', function() {
         audio.play();
       }, false);
+      box.addEventListener('click', showImage, false);
     }
 
     function stepClass(step) {
@@ -535,3 +536,62 @@ x = setInterval(function() {
 
 // Inicializar cuando la página cargue
 // window.onload = init;
+
+
+
+// function showImage() {
+//   // Obtén el elemento <img> con la ruta definida
+//   const hiddenImage = document.getElementById('hidden-image');
+//   const imagePath = hiddenImage.src; // Obtén la ruta de la imagen desde el atributo src
+
+//   // Crea una copia de la imagen y muéstrala en el contenedor
+//   const img = document.createElement('img');
+//   img.src = imagePath;
+//   img.alt = hiddenImage.alt; // Usa el mismo texto alternativo
+//   img.style.width = '200px'; // Ajusta el tamaño si es necesario
+//   img.style.height = 'auto';
+
+//   // Inserta la imagen en el contenedor
+//   const container = document.getElementById('image-container');
+//   if (container) {
+//     container.innerHTML = ''; // Limpia cualquier contenido anterior
+//     container.appendChild(img);
+//   } else {
+//     console.error('No se encontró el contenedor con id "image-container".');
+//   }
+// }
+
+
+function init() {
+  box.addEventListener('click', openBox, false);
+  box.addEventListener('click', showfireworks, false);
+  box.addEventListener('click', function() {
+    audio.play();
+  }, false);
+  box.addEventListener('click', showImage, false);
+}
+
+function showImage() {
+  // Retraso de 2 segundos antes de mostrar la imagen
+  setTimeout(function() {
+    // Obtén el elemento <img> con la ruta definida
+    const hiddenImage = document.getElementById('hidden-image');
+    const imagePath = hiddenImage.src; // Obtén la ruta de la imagen desde el atributo src
+
+    // Crea una copia de la imagen y muéstrala en el contenedor
+    const img = document.createElement('img');
+    img.src = imagePath;
+    img.alt = hiddenImage.alt;
+
+    // Inserta la imagen en el contenedor
+    const container = document.getElementById('image-container');
+    if (container) {
+      container.innerHTML = ''; // Limpia cualquier contenido anterior
+      container.appendChild(img);
+      // Establece la opacidad a 1 para que la imagen aparezca suavemente
+      container.style.opacity = 1;
+    } else {
+      console.error('No se encontró el contenedor con id "image-container".');
+    }
+  }, 5000); // Retraso de 2000 ms (2 segundos)
+}
