@@ -2,6 +2,7 @@ const count = document.getElementById('count');
 const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
+const specialImage = document.getElementById('hidden-image');
 
 const config = {
   birthdate: 'Nov 21, 2024 10:26:',
