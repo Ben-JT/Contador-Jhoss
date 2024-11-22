@@ -184,13 +184,13 @@ li span {
 #image-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 300px; /* Ajusta la altura del contenedor si es necesario */
+  align-items:center;
+  height: 50%; /* Ajusta la altura del contenedor si es necesario */
   opacity: 0; /* La imagen será invisible al principio */
   transition: opacity 1s ease; /* Suaviza la transición de aparición */
 }
 
 #image-container img {
-  width: 200px; /* Ajusta el tamaño si es necesario */
+  width: 50%; /* Ajusta el tamaño si es necesario */
   height: auto;
 }
