@@ -508,12 +508,21 @@ x = setInterval(function() {
 const box = document.getElementById('box');
 const audio = document.getElementById('audio');  // Referencia al elemento <audio>
 
+box.addEventListener('click', function() {
+  setTimeout(() => {
+    audio.play().catch((error) => {
+      console.error('Error al reproducir la música:', error);
+    });
+  }, 2000);
+});
+
+
 // Función para reproducir la canción con retraso
-function playSong() {
-  setTimeout(function() {
-    audio.play();  // Reproduce la canción después de un retraso
-  }, 1000); // 2000 milisegundos = 2 segundos de retraso
-}
+// function playSong() {
+//   setTimeout(function() {
+//     audio.play();  // Reproduce la canción después de un retraso
+//   }, 1000); // 2000 milisegundos = 2 segundos de retraso
+// }
 // Controlar el volumen solo desde JS (ajustar a 50% de volumen)
 function setVolume() {
   audio.volume = 1;  // Ajusta el volumen al 50% (puedes cambiar este valor entre 0.0 y 1.0)
