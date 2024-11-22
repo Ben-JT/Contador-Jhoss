@@ -181,16 +181,18 @@ li span {
  }
 }
 
+
 #image-container {
   display: flex;
   justify-content: center;
   align-items:center;
-  height: 15rem; /* Ajusta la altura del contenedor si es necesario */
-  opacity: 0; /* La imagen será invisible al principio */
-  transition: opacity 1s ease; /* Suaviza la transición de aparición */
+  height: 15rem; 
+  opacity: 0; 
+  transition: opacity 1s ease; 
 }
 
 #image-container img {
-  width: 15rem; /* Ajusta el tamaño si es necesario */
+  width: 15rem; 
   height: auto;
 }
+

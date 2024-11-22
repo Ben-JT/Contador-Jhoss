@@ -499,10 +499,10 @@ x = setInterval(function() {
     init();
   }
 
-  // if (distance < 0) {
-  //     clearInterval(x);
-  //     console.log("happy birthday");
-  // }
+  if (distance < 0) {
+      clearInterval(x);
+      console.log("happy birthday");
+  }
 }, second);
 
 
@@ -563,14 +563,6 @@ x = setInterval(function() {
 // }
 
 
-function init() {
-  box.addEventListener('click', openBox, false);
-  box.addEventListener('click', showfireworks, false);
-  box.addEventListener('click', function() {
-    audio.play();
-  }, false);
-  box.addEventListener('click', showImage, false);
-}
 
 function showImage() {
   // Retraso de 2 segundos antes de mostrar la imagen
