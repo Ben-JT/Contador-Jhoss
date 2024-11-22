@@ -509,11 +509,7 @@ const box = document.getElementById('box');
 const audio = document.getElementById('audio');  // Referencia al elemento <audio>
 
 box.addEventListener('click', function() {
-  setTimeout(() => {
-    audio.play().catch((error) => {
-      console.error('Error al reproducir la música:', error);
-    });
-  }, 2000);
+  audio.play();
 });
 
 
