@@ -406,7 +406,7 @@ x = setInterval(function() {
   function anim() {
     window.requestAnimationFrame(anim);
 
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = '#282C34';
     ctx.fillRect(0, 0, w, h);
 
     ctx.translate(hw, hh);
@@ -464,6 +464,9 @@ x = setInterval(function() {
     function init() {
       box.addEventListener('click', openBox, false);
       box.addEventListener('click', showfireworks, false);
+      box.addEventListener('click', function() {
+        audio.play();
+      }, false);
     }
 
     function stepClass(step) {
@@ -505,12 +508,12 @@ x = setInterval(function() {
 //Prueba audio
 // Obtener el elemento box
 // Obtener el elemento box y el elemento de audio
-const box = document.getElementById('box');
-const audio = document.getElementById('audio');  // Referencia al elemento <audio>
+// const box = document.getElementById('box');
+// const audio = document.getElementById('audio');  // Referencia al elemento <audio>
 
-box.addEventListener('click', function() {
-  audio.play();
-});
+// box.addEventListener('click', function() {
+//   audio.play();
+// });
 
 
 // Función para reproducir la canción con retraso
@@ -520,15 +523,15 @@ box.addEventListener('click', function() {
 //   }, 1000); // 2000 milisegundos = 2 segundos de retraso
 // }
 // Controlar el volumen solo desde JS (ajustar a 50% de volumen)
-function setVolume() {
-  audio.volume = 1;  // Ajusta el volumen al 50% (puedes cambiar este valor entre 0.0 y 1.0)
-}
+// function setVolume() {
+//   audio.volume = 1;  // Ajusta el volumen al 50% (puedes cambiar este valor entre 0.0 y 1.0)
+// }
 // Función de inicialización para agregar los event listeners
-function init() {
-  box.addEventListener('click', playSong, false);  // Reproducir la canción al hacer clic
-  box.addEventListener('click', setVolume, false);  // Ajustar el volumen al 50% al hacer clic
+// function init() {
+//   box.addEventListener('click', playSong, false);  // Reproducir la canción al hacer clic
+//   // box.addEventListener('click', setVolume, false);  // Ajustar el volumen al 50% al hacer clic
 
-}
+// }
 
 // Inicializar cuando la página cargue
-window.onload = init;
+// window.onload = init;
